@@ -1,0 +1,15 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+
+# IntelliJ
+.idea/
+out/
+
+
+# Datasource local storage ignored files
+/../../../../../../../:\LocalDisk(D)\information TechnologyY2\ITP1\Java2\java-tns-netflix-Solomonso\.idea/dataSources/
+/dataSources.local.xml
+
+# Editor-based HTTP Client requests
+/httpRequests/
