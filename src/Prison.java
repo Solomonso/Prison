@@ -1,36 +1,31 @@
 import java.util.ArrayList;
-import java.util.Iterator;
+
 /**
  * The Prison class holds the information of Cell with their prisoners.
  * It prints the details of the cell and shows which prisoner will be released first.
- * @author (solomon)
  *
+ * @author (solomon)
  */
-public class Prison
-{
-    // instance variables - replace the example below with your own
+public class Prison {
     private ArrayList<Cell> cellList;
 
     /**
      * Creates a Prison
      */
-    public Prison()
-    {
+    public Prison() {
         this.cellList = new ArrayList<>();
     }
 
     /**
-     * add a cell from the cellList.
+     * Add a cell from the cellList.
      *
      * @param addCell The cell to be added to the cell.
      */
-    public void addCellToPrison(Cell addCell)
-    {
-      this.cellList.add(addCell);
+    public void addCellToPrison(Cell addCell) {
+        this.cellList.add(addCell);
     }
 
-    public ArrayList<Cell> getCellList()
-    {
+    public ArrayList<Cell> getCellList() {
         return this.cellList;
     }
 
@@ -39,33 +34,27 @@ public class Prison
      *
      * @param cellToRemove The cell to be removed from the cell list.
      */
-    public void removeCell(Cell cellToRemove)
-    {
-      if(!this.cellList.isEmpty())
-      {
-      this.cellList.remove(cellToRemove);
-      }
-      else
-      {
+    public void removeCell(Cell cellToRemove) {
+        if (!this.cellList.isEmpty()) {
+            this.cellList.remove(cellToRemove);
+        } else {
             System.out.println("cell is empty");
-      }
+        }
     }
 
     /**
-     *
-     * @return Returns numbers of cells
+     * @return Returns numbers of cells.
      */
-    public int getNumberOfCells()
-    {
-      return cellList.size();
+    public int getNumberOfCells() {
+        return cellList.size();
     }
 
     /**
-     * This methods prints the details of a prisoner in particular cell. Using Iterators.
+     * This methods prints the details of a prisoner in particular cell.
+     *
      * @param enterCellNumber Accepts an int to represent the cell number.
      */
-    public void printCellDetailsByGuard(int enterCellNumber)
-    {
+    public void printCellDetailsByGuard(int enterCellNumber) {
         for (Cell cells : this.cellList) {
             int cellNumber = cells.getCellNumber();
             if (cellNumber == enterCellNumber) {
@@ -76,10 +65,10 @@ public class Prison
 
     /**
      * This method prints the prisoner to be released first in a particular cell
+     *
      * @param enterCellNumber Accepts an int to represent the cell number
      */
-    public void getPrisonerToBeReleasedFirst(int enterCellNumber)
-    {
+    public void getPrisonerToBeReleasedFirst(int enterCellNumber) {
         for (Cell cells : this.cellList) {
             int cellNumber = cells.getCellNumber();
             if (cellNumber == enterCellNumber) {
@@ -88,11 +77,9 @@ public class Prison
         }
     }
 
-    public void getCellDetails()
-    {
-      for(Cell cell: this.cellList)
-      {
-          System.out.println(cell.getCellNumber() + cell.getPrisonersInCell() + "\n");;
-      }
+    public void printCellDetails() {
+        for (Cell cell : this.cellList) {
+            System.out.println(cell.getCellNumber() + cell.getPrisonersInCell() + "\n");
+        }
     }
 }
